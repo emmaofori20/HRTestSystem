@@ -21,6 +21,12 @@ namespace HRTestSystem.Controllers
         public IActionResult Privacy()
         {
             return View();
+        } 
+        
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login", "Account");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
