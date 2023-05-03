@@ -39,7 +39,7 @@ namespace HRTestSystem.Controllers
                     if (accessToken.UserBelongsToApplication)
                     {
                         // Save the access token in the user's session
-                        HttpContext.Session.SetString("AccessToken", accessToken.Token);
+                        HttpContext.Session.SetString("HRAccessToken", accessToken.Token);
                         HttpContext.Session.SetString("UserName", accessToken.UserName);
 
                         return RedirectToAction("Index", "Home");
